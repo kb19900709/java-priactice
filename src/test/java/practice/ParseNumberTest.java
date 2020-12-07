@@ -19,7 +19,7 @@ public class ParseNumberTest {
     }
 
     @Test
-    public void convertFailedWhileInputIsZeroOrNullOrSingleSign() {
+    public void convertFailedWhileInputIsZeroOrNullOrSingleSignTest() {
         assertThatThrownBy(() -> ParseNumber.convert(null))
                 .isInstanceOf(NumberFormatException.class);
 
@@ -34,8 +34,14 @@ public class ParseNumberTest {
     }
 
     @Test
-    public void convertFailedWithWrongChar() {
+    public void convertFailedWithWrongCharTest() {
         assertThatThrownBy(() -> ParseNumber.convert("-$123"))
+                .isInstanceOf(NumberFormatException.class);
+    }
+
+    @Test
+    public void convertFailedOverLimitTest(){
+        assertThatThrownBy(() -> ParseNumber.convert("2147483648"))
                 .isInstanceOf(NumberFormatException.class);
     }
 }

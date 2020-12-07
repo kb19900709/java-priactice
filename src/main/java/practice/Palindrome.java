@@ -2,12 +2,7 @@ package practice;
 
 public class Palindrome {
 
-    public static void main(String[] args) {
-        String target = "ABBA";
-        System.out.println(isPalindrome(target));
-    }
-
-    private static boolean isPalindrome(String target) {
+    public static boolean isPalindrome(String target) {
         if (target == null || target.length() == 0) {
             return false;
         }

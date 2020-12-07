@@ -27,7 +27,7 @@ public class StringArrayShiftTest {
     }
 
     @Test
-    public void dynamicToLeft() {
+    public void dynamicToLeftTest() {
         assertThat(StringArrayShift.dynamicToLeft(targetStr, 2)).isEqualTo("CDEAB");
     }
 }
