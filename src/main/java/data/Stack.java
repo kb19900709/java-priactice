@@ -29,21 +29,4 @@ public class Stack<T> {
         }
         return null;
     }
-
-    public static void main(String[] args) {
-        Stack<String> stringStack = new Stack<>(String.class, 5);
-        stringStack.push("5"); // the first element
-        stringStack.push("4");
-        stringStack.push("3");
-        stringStack.push("2");
-        stringStack.push("1"); // the last element
-        stringStack.push("0");
-
-        System.out.println(stringStack.pop());
-        System.out.println(stringStack.pop());
-        System.out.println(stringStack.pop());
-        System.out.println(stringStack.pop());
-        System.out.println(stringStack.pop());
-        System.out.println(stringStack.pop());
-    }
 }

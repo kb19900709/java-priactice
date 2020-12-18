@@ -30,10 +30,13 @@ public class Queue {
         System.out.println(stringBasicQueue.dequeue());
     }
 
-    private static class BasicQueue<T> {
+    public static class BasicQueue<T> {
         private T[] objectArray;
+
         private int max;
+
         private int rear = -1;
+
         private int front = 0;
 
         public BasicQueue(Class<T> objectClass, int size) {
@@ -41,7 +44,7 @@ public class Queue {
             this.max = size;
         }
 
-        private void enqueue(T t) {
+        public void enqueue(T t) {
             if (rear + 1 == max) {
                 System.out.println("the queue is full of capacity");
                 return;
@@ -50,7 +53,7 @@ public class Queue {
             objectArray[++rear] = t;
         }
 
-        private T dequeue() {
+        public T dequeue() {
             if (front > rear) {
                 System.out.println("the queue is empty");
                 return null;
@@ -59,8 +62,9 @@ public class Queue {
         }
     }
 
-    private static class CircleQueue<T>{
+    private static class CircleQueue<T> {
         private T[] objectArray;
+
         private int max;
     }
 }
